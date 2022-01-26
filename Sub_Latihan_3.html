@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Menu Login</title>
+  <link rel="icon" type="image/x-icon" href="Flower.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    th{
+      text-align: center;
+    }
+
+  </style>
+</head>
+<!-- Title -->
+<body id="home" class="container-fluid text-center"></body>
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>TAB PRESENSI</h1>      
+    <p>Mahasiswa Universitas Amikom Yogyakarta</p>
+  </div>
+</div>
+<!-- main data -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" onclick="document.location='Latihan_3.html'">Encan</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="Home" class="container text-center">
+  <form action="/action_page.php">
+  <div class="form-group">
+    <input type="text" class="form-control" id="txt" placeholder="Nama Lengkap">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" id="txt" placeholder="NIM">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-log-in"></i></span>
+    <input type="text" class="form-control" id="In" placeholder="7.15 AM" disabled>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-log-out"></i></span>
+    <input type="text" class="form-control" id="Out" placeholder="16.50 PM" disabled>
+  </div>
+  <br>
+  <div class="form-group">
+    <img src="maps.jpg" width="100%" height="100%">
+  </div>
+    <div class="form-group"></divclass>
+      <input type="text" class="form-control" id="txt" placeholder="GPS Coordinate : 7°15'53.8''S - 110°09'16.6''E" disabled>
+    </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+  <!-- presensi -->
+<div id="Home" class="container text-center">
+  <h2>Data Presensi</h2>
+    <p>Ganbare Desu!</p> 
+    <br> 
+
+    <div class="table-responsive">          
+      <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama</th>
+          <th>NIM</th>
+          <th>In</th>
+          <th>Out</th>
+          <th>Foto</th>
+          <th>GPS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Ivan</td>
+          <td>20.85.xxxx</td>
+          <td>7.15 AM</td>
+          <td>16.50 PM</td>
+          <td></td>
+          <td>7°15'53.8''S - 110°09'16.6''E"</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Encan</td>
+          <td>20.85.xxxx</td>
+          <td>7.15 AM</td>
+          <td>16.50 PM</td>
+          <td></td>
+          <td>7°15'53.8''S - 110°09'16.6''E"</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Willdan</td>
+          <td>20.85.xxxx</td>
+          <td>7.15 AM</td>
+          <td>16.50 PM</td>
+          <td></td>
+          <td>7°15'53.8''S - 110°09'16.6''E"</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Irwannh</td>
+          <td>20.85.xxxx</td>
+          <td>7.15 AM</td>
+          <td>16.50 PM</td>
+          <td></td>
+          <td>7°15'53.8''S - 110°09'16.6''E"</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Jack</td>
+          <td>20.85.xxxx</td>
+          <td>7.15 AM</td>
+          <td>16.50 PM</td>
+          <td></td>
+          <td>7°15'53.8''S - 110°09'16.6''E"</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
+<footer>
+<footer class="text-center">
+  <a class="up-arrow" href="#home" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Copyright 2021-2022 by Ivan Ardians. All Rights Reserved.</p>
+</footer>
+</footer>
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#home']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+</footer>
+</html>

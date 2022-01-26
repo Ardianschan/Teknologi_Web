@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Teknologi Web Exercise</title>
+  <link rel="icon" type="image/x-icon" href="Flower.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #000000;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #000000;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #000000;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(80%);
+    filter: grayscale(0%); 
+    width: 100%;
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none;
+    }
+  }
+  .bg-1 {
+    background: #000000;
+    color: #fff;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #000000;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #000000;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #fff;
+    color: #000000 !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #000000;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #000000;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #b9b9b9 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #000000 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: #29292c !important;
+  }
+  footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 32px;
+  }
+  footer a {
+    color: #fff;
+  }
+  footer a:hover {
+    color: #000000;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                         
+      </button>
+      <a class="navbar-brand" href="#myPage">Encan</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#about">PROFILE</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#works">EXPERIENCES</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a onclick="document.location='Page_3.html'">Anime List</a></li>
+            <li><a onclick="document.location='Page_4.html'">Galerry</a></li>
+            <li><a onclick="document.location='Page_5.html'">Project</a></li> 
+          </ul>
+        </li>
+        <li><a href= button class="button" data-toggle="modal" data-target="#modal2">LOGIN</button></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Modal Login-->
+<div id="modal2" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal Login-->
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class=""></span> LOGIN DULU BOSS!</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="id"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control" id="email" placeholder="e-mail / phone / id">
+            </div>
+            <div class="form-group">
+              <label for="pwd"><span class="glyphicon glyphicon-lock"></span> Password</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Enter Password">
+            </div>
+            <a onclick="document.location='Sub_Latihan_3.html'" class="btn btn-block">Login</a>
+              <!--<button type="submit" class="btn btn-block">Login 
+              </button> -->
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class=" "></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+
+  </div>
+</div>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="encan1.png" alt="Boruto" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>OTAKU NO JUTSU</h3>
+          <p>Shounen 愛 is my Favourite</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="cat.jpg" alt="Cat" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>MOBA GAMERS</h3>
+          <p> Eazy Savages</p>
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="block.jpg" alt="Block" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>EDITOR KELAS TERI</h3>
+          <p>Kalau lagi gabut aja</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Container-->
+<div id="about" class="container text-center">
+  <h3>IVAN ARDIANSYAH</h3>
+  <p>Mahasiswa Geografi Amikom</p>
+  <p>I like more the way to studying geography class rather than others it's because yeah i was in society class when i was on high school . Actually i didn't liked this lesson in the first time i met before it's because i thought when it'll be annoying lesson for a whole times of my study. The reasons why i like geography class maybe first , i got the friendly teacher who's teach us with full of patience and she is very close to us.The Second one , geography is learning about how this universe was made :) , lol it's kinda look like the difference theory with our holy Qur'an's  theory , and because of that i debated with my teacher before i realized that we just a creatures who's made with fears and nothingness.</p>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>I</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="iv.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo" class="collapse">
+        <p>Ivan Ardians</p>
+        <p>172cm</p>
+        <p>Pretty Boy</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>❤️</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="ivv.jpeg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>Wildan Navis</p>
+        <p>170cm</p>
+        <p>Cute Boy</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>U</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="shoe.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>Encan</p>
+        <p>???cm</p>
+        <p>Cold Boy</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (SKILLS) -->
+<div id="skills" class="bg-1">
+  <div class="container"></div>
+  <h3 class="text-center">SKILLS</h3>
+  <div class="container">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="Editin.jpg" alt="Encan" width="400" height="300" data-toggle="modal" data-target="#modal3">
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="Games.jpg" alt="Encan" width="400" height="300" data-toggle="modal" data-target="#modal4">
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="Photo.jpg" alt="Encan" width="400" height="300" data-toggle="modal" data-target="#modal5">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- Container (Contact Section) -->
+<div id="works" class="container">
+  <h3 class="text-center">EXPERIENCES</h3>
+
+  <br>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">1st</a></li>
+    <li><a data-toggle="tab" href="#menu1">2nd</a></li>
+    <li><a data-toggle="tab" href="#menu2">3rd</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h2>Lab Assistant</h2>
+      <p>Menjadi asisten praktikum mata kuliah Kartografi Dasar. </p>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+          20%
+        </div>
+      </div>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h2>Teacher Assistant</h2>
+      <p>Membantu guru dalam mengajar para santri.</p>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+          80%
+        </div>
+      </div>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h2>Joki Handal</h2>
+      <p> Mau joki tugas ataupun games dengan hasil yang memuaskan namun tidak membuat dompet habis.</p>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+          90%
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="maps.jpg" class="img-responsive" style="width:100%" usemap="#workmap">
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
+
+<!-- Modal 3-->
+<div id="modal3" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal Login-->
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="modal-title">Video and Photo Editing</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <img src="Editin.jpg" class="img-responsive" style="width:100%;" data-toggle="modal3" data-target="#modal3" alt="Image">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+            Close</button>
+          </div>
+        </div>
+
+  </div>
+</div>
+<!-- Modal 4-->
+<div id="modal4" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal Login-->
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="modal-title">Smartphone Gaming</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <img src="Games.jpg" class="img-responsive" style="width:100%;" data-toggle="modal3" data-target="#modal3" alt="Image">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+            Close</button>
+          </div>
+        </div>
+
+  </div>
+</div>
+<!-- Modal 5-->
+<div id="modal5" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal Login-->
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="modal-title">Smartphone Photography</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <img src="Photo.jpg" class="img-responsive" style="width:100%;" data-toggle="modal3" data-target="#modal3" alt="Image">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+            Close</button>
+          </div>
+        </div>
+
+  </div>
+</div>
+
